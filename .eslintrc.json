@@ -38,6 +38,7 @@
     "no-console": "off",
     "no-useless-constructor": "off",
     "no-empty-function": "off",
+    "no-unused-vars": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
