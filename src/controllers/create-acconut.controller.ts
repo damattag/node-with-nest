@@ -13,7 +13,7 @@ import { ZodValidationPipe } from '../pipes/zod-validation-pipe';
 import {
   createAccountBodySchema,
   type CreateAccountBodySchema,
-} from '../DTO/create-account';
+} from '../DTO/account';
 
 @Controller('/accounts')
 export class CreateAccountController {

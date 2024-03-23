@@ -12,3 +12,19 @@ export const createQuestionBodySchema = z.object({
 });
 
 export type CreateQuestionBodySchema = z.infer<typeof createQuestionBodySchema>;
+
+export const pageQueryParamSchema = z
+  .string()
+  .optional()
+  .default('1')
+  .transform(Number)
+  .pipe(
+    z
+      .number({
+        invalid_type_error: 'Page must be a number',
+        required_error: 'Page is required',
+      })
+      .min(1),
+  );
+
+export type PageQueryParamSchema = z.infer<typeof pageQueryParamSchema>;
