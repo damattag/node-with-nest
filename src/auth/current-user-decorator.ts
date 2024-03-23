@@ -1,0 +1,11 @@
+import { createParamDecorator, ExecutionContext } from '@nestjs/common';
+
+import { TokenSchema } from '../DTO/authenticate';
+
+export const CurrentUser = createParamDecorator(
+  (_: never, context: ExecutionContext) => {
+    const request = context.switchToHttp().getRequest();
+
+    return request.user as TokenSchema;
+  },
+);
