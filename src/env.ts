@@ -14,6 +14,14 @@ export const envSchema = z.object({
     .url({
       message: 'DATABASE_URL must be a valid URL',
     }),
+  JWT_PRIVATE_KEY: z.string({
+    invalid_type_error: 'JWT_PRIVATE_KEY must be a string',
+    required_error: 'JWT_PRIVATE_KEY is required',
+  }),
+  JWT_PUBLIC_KEY: z.string({
+    invalid_type_error: 'JWT_PUBLIC_KEY must be a string',
+    required_error: 'JWT_PUBLIC_KEY is required',
+  }),
 });
 
 export type Env = z.infer<typeof envSchema>;
