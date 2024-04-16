@@ -6,7 +6,7 @@ import {
   createQuestionBodySchema,
 } from '@/infra/http/DTO/question';
 import { JwtAuthGuard } from '@/infra/auth/jwt-auth.guard';
-import { PrismaService } from '@/infra/prisma/prisma.service';
+import { PrismaService } from '@/infra/database/prisma/prisma.service';
 import { CurrentUser } from '@/infra/auth/current-user-decorator';
 import { TokenSchema } from '@/infra/http/DTO/authenticate';
 
