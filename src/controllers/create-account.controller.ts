@@ -8,12 +8,12 @@ import {
 } from '@nestjs/common';
 import { hash } from 'bcryptjs';
 
-import { PrismaService } from '../prisma/prisma.service';
-import { ZodValidationPipe } from '../pipes/zod-validation-pipe';
+import { PrismaService } from '@/prisma/prisma.service';
+import { ZodValidationPipe } from '@/pipes/zod-validation-pipe';
 import {
   createAccountBodySchema,
   type CreateAccountBodySchema,
-} from '../DTO/account';
+} from '@/DTO/account';
 
 @Controller('/accounts')
 export class CreateAccountController {

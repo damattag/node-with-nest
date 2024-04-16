@@ -1,6 +1,6 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 
-import { TokenSchema } from '../DTO/authenticate';
+import { TokenSchema } from '@/DTO/authenticate';
 
 export const CurrentUser = createParamDecorator(
   (_: never, context: ExecutionContext) => {

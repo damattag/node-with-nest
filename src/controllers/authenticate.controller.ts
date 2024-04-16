@@ -11,9 +11,9 @@ import { compare } from 'bcryptjs';
 import {
   authenticateBodySchema,
   type AuthenticateBodySchema,
-} from '../DTO/authenticate';
-import { ZodValidationPipe } from '../pipes/zod-validation-pipe';
-import { PrismaService } from '../prisma/prisma.service';
+} from '@/DTO/authenticate';
+import { ZodValidationPipe } from '@/pipes/zod-validation-pipe';
+import { PrismaService } from '@/prisma/prisma.service';
 
 @Controller('/sessions')
 export class AuthenticateController {
