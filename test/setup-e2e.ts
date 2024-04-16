@@ -1,4 +1,3 @@
-/* eslint-disable node/no-unsupported-features/node-builtins */
 import 'dotenv/config';
 
 import { PrismaClient } from '@prisma/client';

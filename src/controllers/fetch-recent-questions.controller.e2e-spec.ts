@@ -8,7 +8,6 @@ import request from 'supertest';
 import { AppModule } from '@/app.module';
 import { PrismaService } from '@/prisma/prisma.service';
 import { JwtService } from '@nestjs/jwt';
-import { title } from 'process';
 
 describe('Fetch recent questions (E2E)', () => {
   let app: INestApplication;
