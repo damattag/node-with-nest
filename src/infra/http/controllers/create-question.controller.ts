@@ -1,14 +1,14 @@
 import { Body, Controller, Post, UseGuards } from '@nestjs/common';
 
-import { ZodValidationPipe } from '@/pipes/zod-validation-pipe';
+import { ZodValidationPipe } from '@/infra/http/pipes/zod-validation-pipe';
 import {
   type CreateQuestionBodySchema,
   createQuestionBodySchema,
-} from '@/DTO/question';
-import { JwtAuthGuard } from '@/auth/jwt-auth.guard';
-import { PrismaService } from '@/prisma/prisma.service';
-import { CurrentUser } from '@/auth/current-user-decorator';
-import { TokenSchema } from '@/DTO/authenticate';
+} from '@/infra/http/DTO/question';
+import { JwtAuthGuard } from '@/infra/auth/jwt-auth.guard';
+import { PrismaService } from '@/infra/prisma/prisma.service';
+import { CurrentUser } from '@/infra/auth/current-user-decorator';
+import { TokenSchema } from '@/infra/http/DTO/authenticate';
 
 const bodyValidationPipe = new ZodValidationPipe(createQuestionBodySchema);
 
