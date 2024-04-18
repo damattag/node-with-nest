@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+// test
 export const createAccountBodySchema = z.object({
   name: z.string({
     invalid_type_error: 'Name must be a string',
